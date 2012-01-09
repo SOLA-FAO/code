@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.sola</groupId>
     <artifactId>sola-main</artifactId>
-    <version>alpha</version>
+    <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>Main POM</name>
     <properties>
@@ -13,7 +13,7 @@
              Sonar for static code analysis only. Also configure location of 
              Sonar db and host site. -->
         <!--sonar.dynamicAnalysis>false</sonar.dynamicAnalysis-->
-        <sonar.branch>Alpha Release</sonar.branch>
+        <!--sonar.branch>Alpha Release</sonar.branch-->
         <sonar.jdbc.url>jdbc:postgresql://exlprcadreg1.ext.fao.org:5432/sonar</sonar.jdbc.url>
         <sonar.jdbc.driver>org.postgresql.Driver</sonar.jdbc.driver>
         <sonar.host.url>http://exlprcadreg2.ext.fao.org:9000</sonar.host.url>
@@ -58,40 +58,7 @@
         <name>Food and Agriculture Organization of the United Nations (FAO)</name>
         <url>http://www.fao.org</url>
     </organization>
-    
-    <contributors>
-        <contributor>
-            <name>Noelle</name>
-            <email>some.name@gmail.com</email>
-            <url>http://noellemarie.com</url>
-            <organization>Noelle Marie</organization>
-            <organizationUrl>http://noellemarie.com</organizationUrl>
-            <roles>
-                <role>tester</role>
-            </roles>
-            <timezone>-5</timezone>
-            <properties>
-                <gtalk>some.name@gmail.com</gtalk>
-            </properties>
-        </contributor>
-    </contributors>
-    
-    <ciManagement>
-        <system>bamboo</system>
-        <url>http://exlprcadreg2.ext.fao.org:8085/</url>
-        <notifiers>
-            <notifier>
-                <type>mail</type>
-                <sendOnError>true</sendOnError>
-                <sendOnFailure>true</sendOnFailure>
-                <sendOnSuccess>false</sendOnSuccess>
-                <sendOnWarning>false</sendOnWarning>
-                <configuration>
-                    <address>Andrew.McDowell@fao.org</address>
-                </configuration>
-            </notifier>
-        </notifiers>
-    </ciManagement>
+       
     <dependencies>
         <dependency>
             <!-- Junit to be used by all projects -->
@@ -153,15 +120,16 @@
                 <artifactId>maven-license-plugin</artifactId>
                 <version>1.9.0</version>
                 <configuration>
-                    <header>../documentation/licenses/BSD3-lic.txt</header>
+                    <header>./licenses/BSD3-lic.txt</header>
                     <includes>
                         <include>**/*.java</include>                       
                     </includes>
+
                     <excludes>
                         <exclude>**/DateUtility.java</exclude>
                         <exclude>**/Money.java</exclude>  
                         <exclude>**/UnZip.java</exclude> 
-                        <exclude>**/JMapPane.java</exclude>
+                        <exclude>**/JMapPane.java</exclude> 
                         <!--exclude>**/*.xsd</exclude--> 
                     </excludes>
                     <strictChecking>true</strictChecking>
