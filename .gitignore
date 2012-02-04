@@ -1,10 +1,12 @@
 # Nested GIT Repository folders to ignore
-#clients/
-#common/common/
-#common/help/
-#common/rules/
-#common/messaging/
-#services/
+clients/
+common/common/
+common/help/
+common/rules/
+common/messaging/
+services/
+test/
+../database/
 
 # Identifies the subfolders and files to ignore from the 
 # Subfolders to ignore
@@ -17,6 +19,4 @@ catalog.xml
 Thumbs.db
 thumbs.db
 *.pdf
-*.log/clients/
-/../database/
-/test/
+*.log
