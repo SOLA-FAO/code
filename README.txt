@@ -62,8 +62,8 @@ One issue with using Git Slave to push and pull from GitHub is that the
 gits pull and gits push commands prompt for the user's GitHub password
 or every nested repository (i.e. up to 10 times). To avoid this it is
 possible to configure ssh-agent within your Git Bash session. To do
-this open the Git Bash shell and cd to the gitslave subdirectory of the
-code repository. This folder contains the .bashrc file. Using the Git
+this open the Git Bash shell and cd to the git-support subdirectory of
+the code repository. This folder contains the .bashrc file. Using the Git
 Bash shell copy the .bashrc file to your HOME directory (cp .bashrc ~).
 Restart the Git Bash shell to launch the ssh-agent. You will be
 prompted for your GitHub password and this will be stored for future
