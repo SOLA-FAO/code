@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.sola</groupId>
     <artifactId>sola-main</artifactId>
-    <version>1.1.120915</version>
+    <version>1.2-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>Main POM</name>
     <properties>
@@ -13,7 +13,7 @@
              Sonar for static code analysis only. Also configure location of 
              Sonar db and host site. -->
         <!--sonar.dynamicAnalysis>false</sonar.dynamicAnalysis-->
-        <sonar.branch>v1.1</sonar.branch>
+        <!--sonar.branch>v1.1</sonar.branch-->
         <sonar.jdbc.url>jdbc:postgresql://exlprcadreg1.ext.fao.org:5432/sonar</sonar.jdbc.url>
         <sonar.jdbc.driver>org.postgresql.Driver</sonar.jdbc.driver>
         <sonar.host.url>http://exlprcadreg2.ext.fao.org:9000</sonar.host.url>
