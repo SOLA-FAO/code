@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.sola</groupId>
     <artifactId>sola-main</artifactId>
-    <version>1.1-SNAPSHOT</version>
+    <version>1.1.120915</version>
     <packaging>pom</packaging>
     <name>Main POM</name>
     <properties>
@@ -135,7 +135,7 @@
                         <exclude>**/JRendererStatusBarItem.java</exclude>
                         <!--exclude>**/*.xsd</exclude--> 
                     </excludes>
-                    <strictChecking>true</strictChecking>
+                    <strictCheck>true</strictCheck>
                     <useDefaultExcludes>true</useDefaultExcludes>
                     <skipExistingHeaders>false</skipExistingHeaders>
 
