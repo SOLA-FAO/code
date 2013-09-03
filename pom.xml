@@ -130,6 +130,7 @@
                         <exclude>**/JCoordsStatusBarItem.java</exclude> 
                         <exclude>**/JMapStatusBar.java</exclude> 
                         <exclude>**/JRendererStatusBarItem.java</exclude>
+                        <exclude>**/FindAccessory.java</exclude>
                         <!--exclude>**/*.xsd</exclude--> 
                     </excludes>
                     <strictCheck>true</strictCheck>
