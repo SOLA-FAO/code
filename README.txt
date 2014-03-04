@@ -27,8 +27,8 @@ repositories are:
                repository. 
 8) services  - Conatins the EJB and common service projects. Attached
                as the services subdirectory of the code repository.
-9) database  - Contains the SOLA database scripts. Attached relative to
-               the code repository in the ../database directory.
+9) database_sola - Contains the SOLA database scripts. Attached relative
+               to the code repository in the ../database_sola directory.
 10) test     - Contains the Fitness and Performance test projects. 
                Attached in the test subdirectory of the code 
                repository. 
