@@ -4,7 +4,7 @@ registration systems more affordable and more sustainable in developing
 countries. For more information refer to www.flossola.org. 
 
 SOLA uses 10 Git repositories for managing its code base. These
-repositories are:
+repositories are
 
 1) code      - This repository. Contains the Main POM file and
                additional supporting files. This Git repository acts
