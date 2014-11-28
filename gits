@@ -2712,12 +2712,12 @@ elsif ($ARGV[0] eq 'status')
     $okcnt++;
 
     my ($premove);
-    while ($msg =~ s/(^[^\#].*\n)//)
-    {
-      $premove .= $1;
-    }
+    #while ($msg =~ s/(^[^\#].*\n)//)
+    #{
+    #  $premove .= $1;
+    #}
 
-    die "gits unexpected status output (missing branch): $msg" unless ($msg =~ s/^\# (?:On branch |Not currently on any branch.)(.+)?\n//);
+    die "gits unexpected status output (missing branch): $msg" unless ($msg =~ s/^(?:# )?(?:On branch |Not currently on any branch.)(.+)?\n?//);
     my $localbranch = $1 ? $1 : "(no branch)";
     $branch = $localbranch unless ($branch);
     unless ($branch eq $localbranch)
