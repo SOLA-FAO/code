@@ -20,6 +20,7 @@
                 
                 
                 
+                
             </goals>
             <properties>
                 <skipTests>true</skipTests>
