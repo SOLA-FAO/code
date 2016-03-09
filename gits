@@ -923,12 +923,12 @@ sub releasecheck($@)
     }
 
     my ($premove);
-    while ($msg =~ s/(^[^\#].*\n)//)
-    {
-      $premove .= $1;
-    }
+	#while ($msg =~ s/(^[^\#].*\n)//)
+    #{
+    #  $premove .= $1;
+    #}
 
-    die "gits unexpected status output (missing branch): $msg" unless ($msg =~ s/^\# (?:On branch |(Not currently on any branch.))(.+)?\n//);
+	die "gits unexpected status output (missing branch): $msg" unless ($msg =~ s/^(?:# )?(?:On branch |Not currently on any branch.)(.+)?\n?//);
     my $localbranch = $2;
     if ($1 =~ /^Not/)
     {
@@ -1015,7 +1015,7 @@ sub releasecheck($@)
       push(@stashed, $repo);
       $unclean = 1;
       # strip out previous commit from WIP stashes (messages are misleading)
-      $stashes =~ s/^(stash\@{\d+}: )WIP( on .*: [\da-f]+)\.\.\..*$/${1}Work-in-Progress${2}/mg;
+      $stashes =~ s/^(stash\@\{\d+}: )WIP( on .*: [\da-f]+)\.\.\..*$/${1}Work-in-Progress${2}/mg;
       $msg .= $stashes;
     }
 
@@ -2712,12 +2712,12 @@ elsif ($ARGV[0] eq 'status')
     $okcnt++;
 
     my ($premove);
-    while ($msg =~ s/(^[^\#].*\n)//)
-    {
-      $premove .= $1;
-    }
+    #while ($msg =~ s/(^[^\#].*\n)//)
+    #{
+    #  $premove .= $1;
+    #}
 
-    die "gits unexpected status output (missing branch): $msg" unless ($msg =~ s/^\# (?:On branch |Not currently on any branch.)(.+)?\n//);
+    die "gits unexpected status output (missing branch): $msg" unless ($msg =~ s/^(?:# )?(?:On branch |Not currently on any branch.)(.+)?\n?//);
     my $localbranch = $1 ? $1 : "(no branch)";
     $branch = $localbranch unless ($branch);
     unless ($branch eq $localbranch)
@@ -2868,14 +2868,14 @@ elsif ($ARGV[0] eq 'statuses')
       $okcnt++;
 
       my ($premove);
-      while ($msg =~ s/(^[^\#].*\n)//)
-      {
-	$premove .= $1;
-      }
+    #while ($msg =~ s/(^[^\#].*\n)//)
+    #{
+    #  $premove .= $1;
+    #}
 
-      unless ($msg =~ s/^\# (?:On branch |Not currently on any branch.)(.+)?\n//)
+	  unless ($msg =~ s/^(?:# )?(?:On branch |Not currently on any branch.)(.+)?\n?//)  
       {
-	# <TODO>some way for do_checkout to only operate on some slaves</TODO>
+	# <TODO>some way for do_checkout to only operate on some slaves</TODO>      
 	$msg .= do_checkout(2, @oldbranch);
         die "gits unexpected status output (missing branch): $msg";
       }
